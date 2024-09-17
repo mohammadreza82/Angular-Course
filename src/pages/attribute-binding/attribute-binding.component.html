@@ -6,6 +6,8 @@
 
 
 <!-- Directives -->
+<!-- az * estefade mishe -->
+
 <!-- <p [style]="styles">attribute-binding works!</p> -->
 <!-- Attribute Directives -->
 <!-- <p [style.backgroundColor]="'red'"> -->
@@ -26,11 +28,28 @@
 <!-- <p *ngIf="true">ngIf true</p>
 <p *ngIf="false">ngIf false</p> -->
 
-<!-- <p *ngIf="isCorrect">ngIf true</p>
-<p *ngIf="!isCorrect">ngIf false</p> -->
-<!-- <p *ngIf="isCorrect;else elseCond">ngIf true</p> -->
-<!-- #elseCond => localRefrence -->
-<!-- <ng-template #elseCond>Else condition</ng-template> -->
+<!-- <p *ngIf="isCorrect">ngIf true</p> -->
+<!-- <p *ngIf="!isCorrect">ngIf false</p> -->
+<p *ngIf="isCorrect; else elseCond">ngIf true</p>
+<!-- #elseCond => localRefrence ng-template bar asas sharayet khas render mishe -->
+<ng-template #elseCond>Else condition</ng-template>
+
+
+
+
+
+
 
 <p *ngFor="let item of users; let i =index">{{i+1+' : ' +item}}</p>
-<p *ngFor="let item of usersObject"></p>
+<button (click)="addNewUse()">Add New User</button>
+<p *ngFor="let item of usersObject trackBy: trackByFunc">{{item.id +': '+ item.name}}</p>
+
+<!-- ng Switch -->
+<!-- switch mikone ruye yek variable va bar asas magadir un variable mitunim case haye mokhtalef benevisim va un ha kar haye mokhtalef anjam bedan -->
+
+<div [ngSwitch]="switchProperty">
+<app-switchcase1 *ngSwitchCase="'a'"></app-switchcase1>
+<app-switchcase2 *ngSwitchCase="'b'"></app-switchcase2>
+<app-switchcase3 *ngSwitchCase="'c'"></app-switchcase3>
+<app-switchcase4 *ngSwitchCase="'d'"></app-switchcase4>
+</div>
