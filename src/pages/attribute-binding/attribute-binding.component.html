@@ -1,0 +1,36 @@
+<!-- <p [style]="isCorrect?'font-size:2rem;':'font-size:8rem;'">attribute-binding works!</p> -->
+<!-- <p [style.font-size.rem]="isCorrect?'2':'8'">attribute-binding works!</p> -->
+<!-- <p [style]="styles">attribute-binding works!</p> -->
+<!-- <p [class]="isCorrect?'small-font-size bg-attribute':'font-size:8rem;'">attribute-binding works!</p> -->
+<!-- <p [class]="classes">attribute-binding works!</p> -->
+
+
+<!-- Directives -->
+<!-- <p [style]="styles">attribute-binding works!</p> -->
+<!-- Attribute Directives -->
+<!-- <p [style.backgroundColor]="'red'"> -->
+<!-- This paragraph has a red background. -->
+<!-- </p> -->
+<!-- ngStyle -->
+<!-- <p [style]="styles"> -->
+<!-- This paragraph has a red background. -->
+<!-- </p> -->
+<!-- ngClass -->
+<!-- <p [class]="classes">
+    This paragraph has a red background.
+</p> -->
+
+<!-- Structural Directives -->
+
+<!-- Ng If -->
+<!-- <p *ngIf="true">ngIf true</p>
+<p *ngIf="false">ngIf false</p> -->
+
+<!-- <p *ngIf="isCorrect">ngIf true</p>
+<p *ngIf="!isCorrect">ngIf false</p> -->
+<!-- <p *ngIf="isCorrect;else elseCond">ngIf true</p> -->
+<!-- #elseCond => localRefrence -->
+<!-- <ng-template #elseCond>Else condition</ng-template> -->
+
+<p *ngFor="let item of users; let i =index">{{i+1+' : ' +item}}</p>
+<p *ngFor="let item of usersObject"></p>

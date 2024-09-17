@@ -1,0 +1,28 @@
+<!-- [hidden]="userName==='' => Validation -->
+ <p class="text-center">Binding Practice</p> 
+ <hr>
+<div class="d-flex flex-column gap-3">
+    <p [hidden]="userName===''">Welcome {{userName}}</p>
+    <p [hidden]="userName!==''"> please Enter Your UserName</p>
+    <hr>
+    <label>User Name: </label>
+    <input type="text" (input)="onUserNameInputChange($event)">
+    <br>
+    <label>
+        Enter Password
+    </label>
+    <input type="password" (input)="onPasswordInputChange($event)">
+    <br>
+    <label>
+        ReType Password
+    </label>
+    <input type="password" (input)="onReTypePasswordInputChange($event)">
+    <br>
+    <!-- || => or -->
+    <label [hidden]="isPasswordsMatch || password==='' ">
+        Passwords don't match !
+    </label>
+    <label [hidden]="!isPasswordsMatch">
+        Passwords match !
+    </label>
+</div>
