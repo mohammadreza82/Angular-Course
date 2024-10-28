@@ -14,15 +14,14 @@ import { Switchcase3Component } from "../../components/switchcase3/switchcase3.c
 })
 export class AttributeBindingComponent implements OnInit {
   // live cycle
-  isCorrect: boolean = true
+  isCorrect: boolean = false 
   styles = {}
 
   isModified: boolean = true
   isCancelled: boolean = true
   classes = {}
 
-  // ng Switch
-switchProperty:string='b'
+
 
   users: string[] = ['Mmd', 'Amir', 'Mobin']
   // user: Array<string> = ['Mmd', 'Amir', 'Mobin']
@@ -40,7 +39,7 @@ switchProperty:string='b'
       name: 'Mobin',
     },
   ]
-
+ 
 // use effect harchi benevisim to in ijad khahad shod ghabl az tamam dasturati ke tuye componentemoon hast == constrocor
   ngOnInit(): void {
     this.styles = {
@@ -80,9 +79,15 @@ switchProperty:string='b'
       },
     ]
   }
+
   // mane generate ezafi mishe
   // komak be performance barname
-  public trackByFunc(index:number,el:any) {
+  // 2 ta argument dare = 1-index 2-element
+  public trackByFunc(index: number, el: any) {
+    // id unik hastesh 
     return el.id
   }
+
+  // ng Switch
+  switchProperty:string='d'
 }

@@ -15,13 +15,15 @@ export class BindingComponent {
   name: string = 'MohammadReza'
   lastName: string = 'Jamshidi'
   city: string = 'Oskou'
-  isEnable: boolean = true
   
+  isEnable: boolean = false
+
+//  Event Binding
   public onInputChange(e: Event) {
     console.log(e);
-    
+
     this.lastName =(e.target as HTMLInputElement).value;
     // this.lastName = (<HTMLInputElement>e.target).value;
-
   }
+
 }

@@ -26,7 +26,7 @@ export class BindingPracticeComponent {
     // } else {
     //   this.isPasswordsMatch = true
     // }
-    // Advance
+    // Advance 
     this.isPasswordsMatch = this.password !== this.retypePassword ? false : true
   }
 }
